@@ -1,5 +1,5 @@
 const add = (...args) => ({
-    value: () => [...args].reduce((acc, curr) => acc + curr),
+    value: () => args.reduce((acc, curr) => acc + curr),
     add: (...args2) => add(...args, ...args2)
 });
 
