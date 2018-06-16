@@ -1,9 +1,7 @@
-const add = (...args) => {
-    return ({
-        value: () => [...args].reduce((acc, curr) => acc + curr),
-        add: (...args2) => add(...args, ...args2)
-    });
-};
+const add = (...args) => ({
+    value: () => [...args].reduce((acc, curr) => acc + curr),
+    add: (...args2) => add(...args, ...args2)
+});
 
 export default add;
 
